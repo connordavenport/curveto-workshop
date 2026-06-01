@@ -42,15 +42,15 @@ Examples are pulled from the authors' repos' `README.md`
 
 ##### Single filter
 
-![alt tag](https://github.com/roboDocs/PenBallWizard/tree/master/source/html/images/penBallWizard-1.png)
-![alt tag](https://github.com/roboDocs/PenBallWizard/tree/master/source/html/images/penBallWizard-2.png)
+![alt tag](https://github.com/roboDocs/PenBallWizard/blob/master/source/html/images/penBallWizard-1.png)
+![alt tag](https://github.com/roboDocs/PenBallWizard/blob/master/source/html/images/penBallWizard-2.png)
 
 ##### Operations filter
 
 Filters can be defined as a succession of filters and/or boolean operations:
 
-![alt tag](https://github.com/roboDocs/PenBallWizard/tree/master/source/html/images/penBallWizard-3.png)
-![alt tag](https://github.com/roboDocs/PenBallWizard/tree/master/source/html/images/penBallWizard-4.png)
+![alt tag](https://github.com/roboDocs/PenBallWizard/blob/master/source/html/images/penBallWizard-3.png)
+![alt tag](https://github.com/roboDocs/PenBallWizard/blob/master/source/html/images/penBallWizard-4.png)
 
 When defining an operation, you call existing single filters by name and you have a couple of options for each filter in the process. By default, at each step, the glyph is filtered and returned to be passed to the next filter. The ```mode``` option allows you to define how the glyph is passed on to the next step.
 
@@ -61,8 +61,8 @@ Here are the possible arguments for the *mode* option:
 
 [BooleanOperations]: http://robofont.com/documentation/building-tools/toolkit/boolean-glyphmath/
 
-![alt tag](https://github.com/roboDocs/PenBallWizard/tree/master/source/html/images/penBallWizard-5.png)
-![alt tag](https://github.com/roboDocs/PenBallWizard/tree/master/source/html/images/penBallWizard-6.png)
+![alt tag](https://github.com/roboDocs/PenBallWizard/blob/master/source/html/images/penBallWizard-5.png)
+![alt tag](https://github.com/roboDocs/PenBallWizard/blob/master/source/html/images/penBallWizard-6.png)
 
 The `source` value is used to changed the source glyph, possibly at each step if you feel like it. If the cell remains empty, each operation receives the previously filtered glyph. However, you can change that by providing either layer names or numbers that correspond to previous steps. It allows you to either use the original glyph by asking for `'foreground'`, but you can also get glyphs from other layers of the initial glyph or a specific filtered glyph.
 This functionality makes it easy to create a filter that is only a succession of boolean operations between layers, for instance.

@@ -1,0 +1,6 @@
+
+*.af*
+._*
+.DS_Store
+*.pyc
+.venv

@@ -78,9 +78,9 @@ class MetaPen(BasePen):
         self.lineTo(self.firstPt)
         self.other_pen.closePath()
         for on in self.oncurves:
-            self.circle(self.other_pen, on, 15)
+            self.circle(on, 15)
         for off in self.offcurves:
-            self.circle(self.other_pen, off, 7)
+            self.circle(off, 7)
         self.currentPt = None
 
     def circle(self, pos, radius, roundness=0.55):
@@ -106,6 +106,7 @@ class MutatorPen(BasePen):
 
     def __init__(self, other_pen, other_glyph, factor=0.5):
         BasePen.__init__(self, {})
+
         r = RecordingPen()
         other_glyph.draw(r)
         self.other_points = r.value
@@ -237,9 +238,9 @@ class CheckInterpolatablePen(BasePen):
 g = CurrentGlyph()
 with g.undo():
     r = RecordingPen()
-    filterpen = MutatorPen(r, AllFonts()[1]["a"])
+    filterpen = MutatorPen(r, AllFonts()[1][g.name])
     g.draw(filterpen)
-    print(r.value)
-    #g.clearContours()
-    #r.replay(g.getPen())
+    # print(r.value)
+    g.clearContours()
+    r.replay(g.getPen())
 
